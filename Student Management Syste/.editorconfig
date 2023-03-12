@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# Default severity for analyzer diagnostics with category 'Style'
+dotnet_analyzer_diagnostic.category-Style.severity = suggestion
+
+# CS0101: The namespace 'Student_Management_Syste' already contains a definition for 'Ipay'
+dotnet_diagnostic.CS0101.severity = suggestion

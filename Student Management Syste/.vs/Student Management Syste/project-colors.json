@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b01d0fff-fccb-4504-a0ad-0d346c004e88": {
+      "ProjectGuid": "b01d0fff-fccb-4504-a0ad-0d346c004e88",
+      "DisplayName": "Student Management Syste",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "3b2732d3-3469-4547-b706-6914f70944aa": {
+      "ProjectGuid": "3b2732d3-3469-4547-b706-6914f70944aa",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

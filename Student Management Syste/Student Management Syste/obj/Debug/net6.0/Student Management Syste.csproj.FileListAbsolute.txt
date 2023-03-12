@@ -1,0 +1,22 @@
+D:\visual stiduo\Student Management Syste\Student Management Syste\obj\Debug\net6.0\Student Management Syste.csproj.AssemblyReference.cache
+D:\visual stiduo\Student Management Syste\Student Management Syste\obj\Debug\net6.0\Student Management Syste.GeneratedMSBuildEditorConfig.editorconfig
+D:\visual stiduo\Student Management Syste\Student Management Syste\obj\Debug\net6.0\Student Management Syste.AssemblyInfoInputs.cache
+D:\visual stiduo\Student Management Syste\Student Management Syste\obj\Debug\net6.0\Student Management Syste.AssemblyInfo.cs
+D:\visual stiduo\Student Management Syste\Student Management Syste\obj\Debug\net6.0\Student Management Syste.csproj.CoreCompileInputs.cache
+D:\visual stiduo\Student Management Syste\Student Management Syste\bin\Debug\net6.0\Student Management Syste.exe
+D:\visual stiduo\Student Management Syste\Student Management Syste\bin\Debug\net6.0\Student Management Syste.deps.json
+D:\visual stiduo\Student Management Syste\Student Management Syste\bin\Debug\net6.0\Student Management Syste.runtimeconfig.json
+D:\visual stiduo\Student Management Syste\Student Management Syste\bin\Debug\net6.0\Student Management Syste.dll
+D:\visual stiduo\Student Management Syste\Student Management Syste\bin\Debug\net6.0\ref\Student Management Syste.dll
+D:\visual stiduo\Student Management Syste\Student Management Syste\bin\Debug\net6.0\Student Management Syste.pdb
+D:\visual stiduo\Student Management Syste\Student Management Syste\obj\Debug\net6.0\Student Management Syste.dll
+D:\visual stiduo\Student Management Syste\Student Management Syste\obj\Debug\net6.0\ref\Student Management Syste.dll
+D:\visual stiduo\Student Management Syste\Student Management Syste\obj\Debug\net6.0\Student Management Syste.pdb
+D:\visual stiduo\Student Management Syste\Student Management Syste\obj\Debug\net6.0\Student Management Syste.genruntimeconfig.cache
+D:\visual stiduo\Student Management Syste\Student Management Syste\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\visual stiduo\Student Management Syste\Student Management Syste\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\visual stiduo\Student Management Syste\Student Management Syste\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\visual stiduo\Student Management Syste\Student Management Syste\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\visual stiduo\Student Management Syste\Student Management Syste\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\visual stiduo\Student Management Syste\Student Management Syste\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\visual stiduo\Student Management Syste\Student Management Syste\obj\Debug\net6.0\Student Management Syste.csproj.CopyComplete
