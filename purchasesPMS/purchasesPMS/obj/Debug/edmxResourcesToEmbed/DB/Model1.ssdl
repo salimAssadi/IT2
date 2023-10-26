@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="purchasesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Purchase_Items">
+    <Key>
+      <PropertyRef Name="purchase_id" />
+      <PropertyRef Name="prod_id" />
+    </Key>
+    <Property Name="purchase_id" Type="int" Nullable="false" />
+    <Property Name="prod_id" Type="int" Nullable="false" />
+    <Property Name="Batch_NO" Type="int" />
+    <Property Name="Unit_id" Type="int" />
+    <Property Name="Net_price" Type="money" Nullable="false" />
+    <Property Name="quantity" Type="int" Nullable="false" />
+    <Property Name="totalprice" Type="money" Nullable="false" />
+    <Property Name="discount" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="deliver_qauntity" Type="int" />
+    <Property Name="expire_date" Type="date" />
+    <Property Name="tax" Type="decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="TB_CURRENCIES">
+    <Key>
+      <PropertyRef Name="cur_id" />
+    </Key>
+    <Property Name="cur_id" Type="int" Nullable="false" />
+    <Property Name="cur_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="curr_value" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="is_locale" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="TB_PRODUCTS">
+    <Key>
+      <PropertyRef Name="Prod_id" />
+    </Key>
+    <Property Name="Prod_id" Type="int" Nullable="false" />
+    <Property Name="Prod_name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Unite_price" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="SN" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_PURCHASES">
+    <Key>
+      <PropertyRef Name="purchase_id" />
+    </Key>
+    <Property Name="purchase_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="store_Id" Type="int" Nullable="false" />
+    <Property Name="reference_No" Type="int" />
+    <Property Name="purchase_date" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="ShippmentCost" Type="money" />
+    <Property Name="payment_method" Type="nvarchar" MaxLength="50" />
+    <Property Name="payment_status" Type="nvarchar" MaxLength="50" />
+    <Property Name="REMAIN_PRICE" Type="money" />
+    <Property Name="TOTAL_PAIED" Type="money" />
+    <Property Name="DISCOUNT" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="CURR_ID" Type="int" Nullable="false" />
+    <Property Name="SUPP_ID" Type="int" Nullable="false" />
+    <Property Name="purchase_status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="purchase_Notes" Type="ntext" />
+    <Property Name="payment_Notes" Type="ntext" />
+    <Property Name="tax" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_STOCKS">
+    <Key>
+      <PropertyRef Name="store_id" />
+      <PropertyRef Name="prod_id" />
+    </Key>
+    <Property Name="store_id" Type="int" Nullable="false" />
+    <Property Name="prod_id" Type="int" Nullable="false" />
+    <Property Name="quantity" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="stock_Type" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="created_at" Type="datetime" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="supplier_Id" Type="int" />
+  </EntityType>
+  <EntityType Name="TB_STORES">
+    <Key>
+      <PropertyRef Name="store_Id" />
+    </Key>
+    <Property Name="store_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Store_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="store_location" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_SUPPLIERS">
+    <Key>
+      <PropertyRef Name="supplier_id" />
+    </Key>
+    <Property Name="supplier_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="supplier_name" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="supplier_phone" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="supplier_email" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TB_UNITES">
+    <Key>
+      <PropertyRef Name="unit_id" />
+    </Key>
+    <Property Name="unit_id" Type="int" Nullable="false" />
+    <Property Name="unit_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_USERS">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Full_Name" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'purchases.dbo.purchases_view' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="purchases_view">
+    <Key>
+      <PropertyRef Name="purchase_id" />
+      <PropertyRef Name="cur_name" />
+      <PropertyRef Name="tax" />
+      <PropertyRef Name="purchase_status" />
+      <PropertyRef Name="purchase_date" />
+      <PropertyRef Name="Store_name" />
+      <PropertyRef Name="supplier_name" />
+    </Key>
+    <Property Name="purchase_id" Type="int" Nullable="false" />
+    <Property Name="cur_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="tax" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="payment_Notes" Type="ntext" />
+    <Property Name="purchase_Notes" Type="ntext" />
+    <Property Name="purchase_status" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DISCOUNT" Type="decimal" Precision="5" Scale="0" />
+    <Property Name="TOTAL_PAIED" Type="money" />
+    <Property Name="REMAIN_PRICE" Type="money" />
+    <Property Name="payment_status" Type="nvarchar" MaxLength="50" />
+    <Property Name="payment_method" Type="nvarchar" MaxLength="50" />
+    <Property Name="ShippmentCost" Type="money" />
+    <Property Name="purchase_date" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="reference_No" Type="int" />
+    <Property Name="Store_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="supplier_name" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Purchase_Items_TB_PRODUCTS">
+    <End Role="TB_PRODUCTS" Type="Self.TB_PRODUCTS" Multiplicity="1" />
+    <End Role="Purchase_Items" Type="Self.Purchase_Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_PRODUCTS">
+        <PropertyRef Name="Prod_id" />
+      </Principal>
+      <Dependent Role="Purchase_Items">
+        <PropertyRef Name="prod_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purchase_Items_TB_Purchases">
+    <End Role="TB_PURCHASES" Type="Self.TB_PURCHASES" Multiplicity="1" />
+    <End Role="Purchase_Items" Type="Self.Purchase_Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_PURCHASES">
+        <PropertyRef Name="purchase_id" />
+      </Principal>
+      <Dependent Role="Purchase_Items">
+        <PropertyRef Name="purchase_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Purchase_Items_TB_Units">
+    <End Role="TB_UNITES" Type="Self.TB_UNITES" Multiplicity="0..1" />
+    <End Role="Purchase_Items" Type="Self.Purchase_Items" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_UNITES">
+        <PropertyRef Name="unit_id" />
+      </Principal>
+      <Dependent Role="Purchase_Items">
+        <PropertyRef Name="Unit_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_PURCHASES_TB_CURRENCIES">
+    <End Role="TB_CURRENCIES" Type="Self.TB_CURRENCIES" Multiplicity="1" />
+    <End Role="TB_PURCHASES" Type="Self.TB_PURCHASES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CURRENCIES">
+        <PropertyRef Name="cur_id" />
+      </Principal>
+      <Dependent Role="TB_PURCHASES">
+        <PropertyRef Name="CURR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_PURCHASES_TB_STORES">
+    <End Role="TB_STORES" Type="Self.TB_STORES" Multiplicity="1" />
+    <End Role="TB_PURCHASES" Type="Self.TB_PURCHASES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_STORES">
+        <PropertyRef Name="store_Id" />
+      </Principal>
+      <Dependent Role="TB_PURCHASES">
+        <PropertyRef Name="store_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_PURCHASES_TB_SUPPLIERS">
+    <End Role="TB_SUPPLIERS" Type="Self.TB_SUPPLIERS" Multiplicity="1" />
+    <End Role="TB_PURCHASES" Type="Self.TB_PURCHASES" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_SUPPLIERS">
+        <PropertyRef Name="supplier_id" />
+      </Principal>
+      <Dependent Role="TB_PURCHASES">
+        <PropertyRef Name="SUPP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_STOCKS_TB_PRODUCTS">
+    <End Role="TB_PRODUCTS" Type="Self.TB_PRODUCTS" Multiplicity="1" />
+    <End Role="TB_STOCKS" Type="Self.TB_STOCKS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_PRODUCTS">
+        <PropertyRef Name="Prod_id" />
+      </Principal>
+      <Dependent Role="TB_STOCKS">
+        <PropertyRef Name="prod_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_STOCKS_TB_STOCKS">
+    <End Role="TB_STOCKS" Type="Self.TB_STOCKS" Multiplicity="1" />
+    <End Role="TB_STOCKS1" Type="Self.TB_STOCKS" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="TB_STOCKS">
+        <PropertyRef Name="store_id" />
+        <PropertyRef Name="prod_id" />
+      </Principal>
+      <Dependent Role="TB_STOCKS1">
+        <PropertyRef Name="store_id" />
+        <PropertyRef Name="prod_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_STOCKS_TB_STORES">
+    <End Role="TB_STORES" Type="Self.TB_STORES" Multiplicity="1" />
+    <End Role="TB_STOCKS" Type="Self.TB_STOCKS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_STORES">
+        <PropertyRef Name="store_Id" />
+      </Principal>
+      <Dependent Role="TB_STOCKS">
+        <PropertyRef Name="store_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="purchasesModelStoreContainer">
+    <EntitySet Name="Purchase_Items" EntityType="Self.Purchase_Items" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_CURRENCIES" EntityType="Self.TB_CURRENCIES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_PRODUCTS" EntityType="Self.TB_PRODUCTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_PURCHASES" EntityType="Self.TB_PURCHASES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_STOCKS" EntityType="Self.TB_STOCKS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_STORES" EntityType="Self.TB_STORES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_SUPPLIERS" EntityType="Self.TB_SUPPLIERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_UNITES" EntityType="Self.TB_UNITES" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USERS" EntityType="Self.TB_USERS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="purchases_view" EntityType="Self.purchases_view" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [purchases_view].[purchase_id] AS [purchase_id], 
+    [purchases_view].[cur_name] AS [cur_name], 
+    [purchases_view].[tax] AS [tax], 
+    [purchases_view].[payment_Notes] AS [payment_Notes], 
+    [purchases_view].[purchase_Notes] AS [purchase_Notes], 
+    [purchases_view].[purchase_status] AS [purchase_status], 
+    [purchases_view].[DISCOUNT] AS [DISCOUNT], 
+    [purchases_view].[TOTAL_PAIED] AS [TOTAL_PAIED], 
+    [purchases_view].[REMAIN_PRICE] AS [REMAIN_PRICE], 
+    [purchases_view].[payment_status] AS [payment_status], 
+    [purchases_view].[payment_method] AS [payment_method], 
+    [purchases_view].[ShippmentCost] AS [ShippmentCost], 
+    [purchases_view].[purchase_date] AS [purchase_date], 
+    [purchases_view].[reference_No] AS [reference_No], 
+    [purchases_view].[Store_name] AS [Store_name], 
+    [purchases_view].[supplier_name] AS [supplier_name]
+    FROM [dbo].[purchases_view] AS [purchases_view]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Purchase_Items_TB_PRODUCTS" Association="Self.FK_Purchase_Items_TB_PRODUCTS">
+      <End Role="TB_PRODUCTS" EntitySet="TB_PRODUCTS" />
+      <End Role="Purchase_Items" EntitySet="Purchase_Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purchase_Items_TB_Purchases" Association="Self.FK_Purchase_Items_TB_Purchases">
+      <End Role="TB_PURCHASES" EntitySet="TB_PURCHASES" />
+      <End Role="Purchase_Items" EntitySet="Purchase_Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Purchase_Items_TB_Units" Association="Self.FK_Purchase_Items_TB_Units">
+      <End Role="TB_UNITES" EntitySet="TB_UNITES" />
+      <End Role="Purchase_Items" EntitySet="Purchase_Items" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_PURCHASES_TB_CURRENCIES" Association="Self.FK_TB_PURCHASES_TB_CURRENCIES">
+      <End Role="TB_CURRENCIES" EntitySet="TB_CURRENCIES" />
+      <End Role="TB_PURCHASES" EntitySet="TB_PURCHASES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_PURCHASES_TB_STORES" Association="Self.FK_TB_PURCHASES_TB_STORES">
+      <End Role="TB_STORES" EntitySet="TB_STORES" />
+      <End Role="TB_PURCHASES" EntitySet="TB_PURCHASES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_PURCHASES_TB_SUPPLIERS" Association="Self.FK_TB_PURCHASES_TB_SUPPLIERS">
+      <End Role="TB_SUPPLIERS" EntitySet="TB_SUPPLIERS" />
+      <End Role="TB_PURCHASES" EntitySet="TB_PURCHASES" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_STOCKS_TB_PRODUCTS" Association="Self.FK_TB_STOCKS_TB_PRODUCTS">
+      <End Role="TB_PRODUCTS" EntitySet="TB_PRODUCTS" />
+      <End Role="TB_STOCKS" EntitySet="TB_STOCKS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_STOCKS_TB_STOCKS" Association="Self.FK_TB_STOCKS_TB_STOCKS">
+      <End Role="TB_STOCKS" EntitySet="TB_STOCKS" />
+      <End Role="TB_STOCKS1" EntitySet="TB_STOCKS" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_STOCKS_TB_STORES" Association="Self.FK_TB_STOCKS_TB_STORES">
+      <End Role="TB_STORES" EntitySet="TB_STORES" />
+      <End Role="TB_STOCKS" EntitySet="TB_STOCKS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

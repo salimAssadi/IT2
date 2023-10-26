@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="191819e92d7c45b7abf67dfa5c47ccf2" Name="Diagram1">
+        <EntityTypeShape EntityType="purchasesModel.Purchase_Items" Width="1.5" PointX="8.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="purchasesModel.TB_CURRENCIES" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="purchasesModel.TB_PRODUCTS" Width="1.5" PointX="6" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="purchasesModel.TB_PURCHASES" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="purchasesModel.TB_STOCKS" Width="1.5" PointX="6" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="purchasesModel.TB_STORES" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="purchasesModel.TB_SUPPLIERS" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="purchasesModel.TB_UNITES" Width="1.5" PointX="6" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="purchasesModel.TB_USERS" Width="1.5" PointX="2.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="purchasesModel.purchases_view" Width="1.5" PointX="8.75" PointY="7.875" IsExpanded="true" />
+        <AssociationConnector Association="purchasesModel.FK_Purchase_Items_TB_PRODUCTS" ManuallyRouted="false" />
+        <AssociationConnector Association="purchasesModel.FK_Purchase_Items_TB_Purchases" ManuallyRouted="false" />
+        <AssociationConnector Association="purchasesModel.FK_Purchase_Items_TB_Units" ManuallyRouted="false" />
+        <AssociationConnector Association="purchasesModel.FK_TB_PURCHASES_TB_CURRENCIES" ManuallyRouted="false" />
+        <AssociationConnector Association="purchasesModel.FK_TB_STOCKS_TB_PRODUCTS" ManuallyRouted="false" />
+        <AssociationConnector Association="purchasesModel.FK_TB_PURCHASES_TB_STORES" ManuallyRouted="false" />
+        <AssociationConnector Association="purchasesModel.FK_TB_PURCHASES_TB_SUPPLIERS" ManuallyRouted="false" />
+        <AssociationConnector Association="purchasesModel.FK_TB_STOCKS_TB_STORES" ManuallyRouted="false" />
+        <AssociationConnector Association="purchasesModel.FK_TB_STOCKS_TB_STOCKS" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

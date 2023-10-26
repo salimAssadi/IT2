@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="purchasesPMS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Middle_Center1" Type="DevExpress.XtraPrinting.TextAlignment" Scope="User">
+      <Value Profile="(Default)">MiddleCenter</Value>
+    </Setting>
+    <Setting Name="oddrow" Type="System.Drawing.Color" Scope="Application">
+      <Value Profile="(Default)">LightGray</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="purchasesModelStoreContainer" CdmEntityContainer="purchasesEntities1">
+    <EntitySetMapping Name="Purchase_Items">
+      <EntityTypeMapping TypeName="purchasesModel.Purchase_Items">
+        <MappingFragment StoreEntitySet="Purchase_Items">
+          <ScalarProperty Name="purchase_id" ColumnName="purchase_id" />
+          <ScalarProperty Name="prod_id" ColumnName="prod_id" />
+          <ScalarProperty Name="Batch_NO" ColumnName="Batch_NO" />
+          <ScalarProperty Name="Unit_id" ColumnName="Unit_id" />
+          <ScalarProperty Name="Net_price" ColumnName="Net_price" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+          <ScalarProperty Name="totalprice" ColumnName="totalprice" />
+          <ScalarProperty Name="discount" ColumnName="discount" />
+          <ScalarProperty Name="deliver_qauntity" ColumnName="deliver_qauntity" />
+          <ScalarProperty Name="expire_date" ColumnName="expire_date" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_CURRENCIES">
+      <EntityTypeMapping TypeName="purchasesModel.TB_CURRENCIES">
+        <MappingFragment StoreEntitySet="TB_CURRENCIES">
+          <ScalarProperty Name="cur_id" ColumnName="cur_id" />
+          <ScalarProperty Name="cur_name" ColumnName="cur_name" />
+          <ScalarProperty Name="curr_value" ColumnName="curr_value" />
+          <ScalarProperty Name="is_locale" ColumnName="is_locale" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PRODUCTS">
+      <EntityTypeMapping TypeName="purchasesModel.TB_PRODUCTS">
+        <MappingFragment StoreEntitySet="TB_PRODUCTS">
+          <ScalarProperty Name="Prod_id" ColumnName="Prod_id" />
+          <ScalarProperty Name="Prod_name" ColumnName="Prod_name" />
+          <ScalarProperty Name="Unite_price" ColumnName="Unite_price" />
+          <ScalarProperty Name="SN" ColumnName="SN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_PURCHASES">
+      <EntityTypeMapping TypeName="purchasesModel.TB_PURCHASES">
+        <MappingFragment StoreEntitySet="TB_PURCHASES">
+          <ScalarProperty Name="purchase_id" ColumnName="purchase_id" />
+          <ScalarProperty Name="store_Id" ColumnName="store_Id" />
+          <ScalarProperty Name="reference_No" ColumnName="reference_No" />
+          <ScalarProperty Name="purchase_date" ColumnName="purchase_date" />
+          <ScalarProperty Name="ShippmentCost" ColumnName="ShippmentCost" />
+          <ScalarProperty Name="payment_method" ColumnName="payment_method" />
+          <ScalarProperty Name="payment_status" ColumnName="payment_status" />
+          <ScalarProperty Name="REMAIN_PRICE" ColumnName="REMAIN_PRICE" />
+          <ScalarProperty Name="TOTAL_PAIED" ColumnName="TOTAL_PAIED" />
+          <ScalarProperty Name="DISCOUNT" ColumnName="DISCOUNT" />
+          <ScalarProperty Name="CURR_ID" ColumnName="CURR_ID" />
+          <ScalarProperty Name="SUPP_ID" ColumnName="SUPP_ID" />
+          <ScalarProperty Name="purchase_status" ColumnName="purchase_status" />
+          <ScalarProperty Name="purchase_Notes" ColumnName="purchase_Notes" />
+          <ScalarProperty Name="payment_Notes" ColumnName="payment_Notes" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_STOCKS">
+      <EntityTypeMapping TypeName="purchasesModel.TB_STOCKS">
+        <MappingFragment StoreEntitySet="TB_STOCKS">
+          <ScalarProperty Name="supplier_Id" ColumnName="supplier_Id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="created_at" ColumnName="created_at" />
+          <ScalarProperty Name="stock_Type" ColumnName="stock_Type" />
+          <ScalarProperty Name="store_id" ColumnName="store_id" />
+          <ScalarProperty Name="prod_id" ColumnName="prod_id" />
+          <ScalarProperty Name="quantity" ColumnName="quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_STORES">
+      <EntityTypeMapping TypeName="purchasesModel.TB_STORES">
+        <MappingFragment StoreEntitySet="TB_STORES">
+          <ScalarProperty Name="store_Id" ColumnName="store_Id" />
+          <ScalarProperty Name="Store_name" ColumnName="Store_name" />
+          <ScalarProperty Name="store_location" ColumnName="store_location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_SUPPLIERS">
+      <EntityTypeMapping TypeName="purchasesModel.TB_SUPPLIERS">
+        <MappingFragment StoreEntitySet="TB_SUPPLIERS">
+          <ScalarProperty Name="supplier_id" ColumnName="supplier_id" />
+          <ScalarProperty Name="supplier_name" ColumnName="supplier_name" />
+          <ScalarProperty Name="supplier_phone" ColumnName="supplier_phone" />
+          <ScalarProperty Name="supplier_email" ColumnName="supplier_email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_UNITES">
+      <EntityTypeMapping TypeName="purchasesModel.TB_UNITES">
+        <MappingFragment StoreEntitySet="TB_UNITES">
+          <ScalarProperty Name="unit_id" ColumnName="unit_id" />
+          <ScalarProperty Name="unit_name" ColumnName="unit_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USERS">
+      <EntityTypeMapping TypeName="purchasesModel.TB_USERS">
+        <MappingFragment StoreEntitySet="TB_USERS">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="purchases_view">
+      <EntityTypeMapping TypeName="purchasesModel.purchases_view">
+        <MappingFragment StoreEntitySet="purchases_view">
+          <ScalarProperty Name="purchase_id" ColumnName="purchase_id" />
+          <ScalarProperty Name="cur_name" ColumnName="cur_name" />
+          <ScalarProperty Name="tax" ColumnName="tax" />
+          <ScalarProperty Name="payment_Notes" ColumnName="payment_Notes" />
+          <ScalarProperty Name="purchase_Notes" ColumnName="purchase_Notes" />
+          <ScalarProperty Name="purchase_status" ColumnName="purchase_status" />
+          <ScalarProperty Name="DISCOUNT" ColumnName="DISCOUNT" />
+          <ScalarProperty Name="TOTAL_PAIED" ColumnName="TOTAL_PAIED" />
+          <ScalarProperty Name="REMAIN_PRICE" ColumnName="REMAIN_PRICE" />
+          <ScalarProperty Name="payment_status" ColumnName="payment_status" />
+          <ScalarProperty Name="payment_method" ColumnName="payment_method" />
+          <ScalarProperty Name="ShippmentCost" ColumnName="ShippmentCost" />
+          <ScalarProperty Name="purchase_date" ColumnName="purchase_date" />
+          <ScalarProperty Name="reference_No" ColumnName="reference_No" />
+          <ScalarProperty Name="Store_name" ColumnName="Store_name" />
+          <ScalarProperty Name="supplier_name" ColumnName="supplier_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
